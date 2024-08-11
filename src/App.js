@@ -92,7 +92,7 @@ const navigate = useNavigate();
           setbtnpopup(!btnpopup)
         }}
         style={{width:"30%"}}>
-         + add new Transaction
+         + Add Transaction
         </button>
         <button 
         style={{backgroundColor:"rgb(211, 80, 32)"}}
@@ -101,7 +101,7 @@ const navigate = useNavigate();
             setuser(false);
             setuserId(null);
             localStorage.removeItem("userId");
-            navigate("/login")
+            navigate("/")
         }}>Logout</button>
       </div>
       

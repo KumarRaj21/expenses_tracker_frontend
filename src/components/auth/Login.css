@@ -42,7 +42,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 38px;
 }
 .login-form{
     height:75%;
@@ -90,4 +89,84 @@
 }
 .login-form form button:hover{
     cursor: pointer;
+}
+
+@media only screen and (max-width:1000px) and (min-width:800px){
+    html,body{
+      width:100%;
+      overflow-x: hidden;
+    }
+    .login-in{
+        width:58%;
+    }
+    .login-head h1{
+        font-size: 33px;
+    }
+    .login-form form button{
+        font-size: 23px;
+    }
+    .login-form form a{
+        font-size: 13px;
+    }
+        
+}
+@media only screen and (max-width:1200px) and (min-width:1000px){
+    html,body{
+      width:100%;
+      overflow-x: hidden;
+    }
+    .login-in{
+        width:49%;
+    }
+    .login-head h1{
+        font-size: 34px;
+    }
+    .login-form form button{
+        font-size: 24px;
+    }
+    .login-form form a{
+        font-size: 14px;
+    }       
+}
+@media only screen and (max-width:800px) and (min-width:600px){
+    html,body{
+      width:100%;
+      overflow-x: hidden;
+    }
+    .login-in{
+        height: 76%;
+        width:70%;
+    }
+    .login-head h1{
+        font-size: 30px;
+    }
+    .login-form form button{
+        font-size: 20px;
+    }
+    .login-form form a{
+        font-size: 13px;
+    }       
+}
+@media only screen and (max-width:600px) and (min-width:300px){
+    html,body{
+      width:100%;
+      overflow-x: hidden;
+    }
+    .login-in{
+        height: 70%;
+        width:88%;
+        padding: 10px;
+    }
+    .login-head h1{
+        font-size: 28px;
+    }
+    .login-form form button{
+        font-size: 18px;
+    }
+    .login-form form a{
+        font-size: 12px;
+    }   
+    .login-form form input{
+        font-size: 14px;
+    }    
 }

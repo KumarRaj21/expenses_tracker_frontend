@@ -8,8 +8,8 @@
 }
 
 .card {
-  height: 160px;
-  width: 85%;
+  height: 163px;
+  width: 87%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@
   font-size: 30px;
   font-weight: 600;
   height:100%;
-  width:40%;
+  width:30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -33,7 +33,7 @@
   font-size: 30px;
   font-weight: 600;
   height:100%;
-  width:40%;
+  width:30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -70,9 +70,88 @@
 }
 .card-category{
   height:100%;
-  width:60%;
+  width:70%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 23px;
 }
+@media only screen and (max-width:1200px) and (min-width:900px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .card {
+    height: 160px;
+    width: 90%;
+    padding: 20px;
+  }
+  .red{
+    font-size: 28px;
+  }
+  .green{
+    font-size: 28px;
+  }
+  .card-head-1{
+    font-size: 20px;
+  }
+  .card-category{
+    font-size: 20px;
+  }
+  }
+  @media only screen and (max-width:900px) and (min-width:600px) {
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .card {
+      height: 160px;
+      width: 100%;
+      padding: 20px;
+    }
+    .red{
+      font-size: 24px;
+    }
+    .green{
+      font-size: 24px;
+    }
+    .card-head-1{
+      font-size: 17px;
+    }
+    .card-category{
+      font-size: 17px;
+    }
+    }
+    @media only screen and (max-width:600px) and (min-width:300px) {
+
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .card {
+        height: 120px;
+        width: 96%;
+        padding: 10px;
+      }
+      .red{
+        font-size: 20px;
+      }
+      .green{
+        font-size: 20px;
+      }
+      .card-head-1{
+        font-size: 12px;
+      }
+      .card-head-2{
+        width: 15%;
+        gap:0px;
+      }
+      .card-category{
+        font-size: 12px;
+      }
+      }

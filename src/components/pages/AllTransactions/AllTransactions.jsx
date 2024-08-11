@@ -11,9 +11,9 @@ const AllTransactions = (props) => {
                     All Transactions
                 </div>
                 <div className='piechart'> 
-                <h2>Welcome <span style={{color:"skyblue", fontWeight:600}}>{props.Username}</span> 👋,
+                <p>Welcome <span style={{color:"skyblue", fontWeight:600}}>{props.Username}</span> 👋,
                 <br/>Pie Chart of your income and expenses, <br />
-                we are providing easiest way to manage expenses, Get a full view so you know where to save. Track spending, incoming amount without any fraud.</h2>
+                we are providing easiest way to manage expenses, Get a full view so you know where to save. Track spending, incoming amount without any fraud.</p>
                     <PieChart transactions={props.TransactionArray} />
                 </div>
                 <div className="cardlist">

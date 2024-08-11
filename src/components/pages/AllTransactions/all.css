@@ -7,69 +7,222 @@
   box-sizing: border-box;
 }
 
-.all-container{
-    min-height:100vh;
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-        border: 2px sloid black;
+.all-container {
+  min-height: 86vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 2px sloid black;
 }
-.all-head{
-  height:13vh;
-  width:100%;
+
+.all-head {
+  height: 13vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
 }
-.piechart{
-  height:70vh;
-  width:100%;
+
+.piechart {
+  height: 64vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap:30px;
+  gap: 30px;
   align-items: center;
 }
-.piechart h2{
-  width:50%;
-  font-style: 25px;
+
+.piechart p {
+  width: 50%;
+  font-size: 25px;
   font-weight: 500;
 }
-.cardlist{
-    min-height:66vh;
-    width:100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-      gap:20px;
-      display:flex;
-    align-items: center;
-    flex-direction: column; 
-    /* overflow-y: auto; */
+
+.piechart h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.all-empty{
-  height:100vh;
-  width:90%;
+
+.cardlist {
+  min-height: 300px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* overflow-y: auto; */
+}
+
+.all-empty {
+  height: 100vh;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:50px;
+  gap: 50px;
 }
-.all-empty h1{
- font-size: 30px;
+
+.all-empty h1 {
+  font-size: 30px;
 }
-.all-empty button{
+
+.all-empty button {
   height: 55px;
- width:30%;
- background-color:  rgb(61, 129, 39) ;
- font-size: 17px;
- color:white;
-    outline: none;
-    border: none;
-    border-radius: 8px;
+  width: 30%;
+  background-color: rgb(61, 129, 39);
+  font-size: 17px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 8px;
 }
-button:hover{
+
+button:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width:1200px) and (min-width:900px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .all-head {
+    font-size: 28px;
+  }
+
+  .piechart {
+    height: 60vh;
+    gap: 35px;
+  }
+
+  .piechart p {
+    font-size: 22px;
+  }
+
+  .cardlist {
+    min-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+
+  .all-empty {
+    height: 100vh;
+    gap: 50px;
+  }
+
+  .all-empty h1 {
+    font-size: 27px;
+  }
+
+  .all-empty button {
+    height: 55px;
+    width: 30%;
+    font-size: 17px;
+  }
+}
+
+
+@media only screen and (max-width:900px) and (min-width:600px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .all-head {
+    font-size: 26px;
+  }
+
+  .piechart {
+    height: 50vh;
+    gap: 40px;
+  }
+
+  .piechart p {
+    height: 80%;
+    width: 45%;
+    font-size: 17px;
+  }
+
+  .cardlist {
+    min-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+
+  .all-empty {
+    height: 100vh;
+    gap: 50px;
+  }
+
+  .all-empty h1 {
+    font-size: 24px;
+  }
+
+  .all-empty button {
+    height: 55px;
+    width: 40%;
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width:600px) and (min-width:300px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .all-head {
+    font-size: 25px;
+  }
+
+  .piechart {
+    height: 70vh;
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+
+  .piechart p {
+    font-size: 14px;
+    width: 95%;
+  }
+
+  .cardlist {
+    min-height: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+
+  .all-empty {
+    height: 100vh;
+    gap: 30px;
+  }
+
+  .all-empty h1 {
+    font-size: 20px;
+  }
+
+  .all-empty button {
+    height: 45px;
+    width: 60%;
+    font-size: 15px;
+  }
 }

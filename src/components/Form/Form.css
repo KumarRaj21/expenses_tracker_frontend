@@ -40,6 +40,9 @@
     align-items: center;
     padding-left: 20px;
 }
+.popup-head h1{
+    font-size: 25px;
+}
 .popup-body{
     height:80%;
     width:90%;
@@ -117,4 +120,114 @@ border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width:1200px) and (min-width:900px) {
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .popup-in{
+        height:80%;
+        width:52%;
+    }
+    .amount-field label, .category-field label, .date-field label, .type-field label{
+        font-size: 14px;
+    }
+    .amount-field input, .category-field select, .type-field select{
+        font-size: 18px;
+    }
+    .date-field .react-datepicker-wrapper{
+        font-size: 18px;
+    }
+    .react-datepicker-wrapper input{
+        font-size: 18px;
+    }
+    .button-submit{
+        font-size: 20px;
+    }
+    .popup-head{
+        height: 12%;
+    }
+    .popup-body{
+        height: 88%;
+    }
+    .popup-head h1{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width:900px) and (min-width:600px) {
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .popup-in{
+        height:80%;
+        width:65%;
+    }
+    .amount-field label, .category-field label, .date-field label, .type-field label{
+        font-size: 14px;
+    }
+    .amount-field input, .category-field select, .type-field select{
+        font-size: 18px;
+    }
+    .date-field .react-datepicker-wrapper{
+        font-size: 18px;
+    }
+    .react-datepicker-wrapper input{
+        font-size: 18px;
+    }
+    .button-submit{
+        font-size: 20px;
+    }
+    .popup-head{
+        height: 12%;
+    }
+    .popup-body{
+        height: 88%;
+    }
+    .popup-head h1{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:600px) and (min-width:300px) {
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .popup-in{
+        height:74%;
+        width:88%;
+    }
+    .amount-field label, .category-field label, .date-field label, .type-field label{
+        font-size: 13px;
+    }
+    .amount-field input, .category-field select, .type-field select{
+        font-size: 16px;
+    }
+    .date-field .react-datepicker-wrapper{
+        font-size: 16px;
+    }
+    .react-datepicker-wrapper input{
+        font-size: 16px;
+    }
+    .button-submit{
+        font-size: 14px;
+    }
+    .popup-head{
+        height: 12%;
+    }
+    .popup-body{
+        height: 88%;
+    }
+    .popup-head h1{
+        font-size: 18px;
+    }
 }
