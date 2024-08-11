@@ -38,7 +38,7 @@
   font-weight: 500;
 }
 .cardlist{
-    height:66vh;
+    min-height:66vh;
     width:100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -46,7 +46,7 @@
       display:flex;
     align-items: center;
     flex-direction: column; 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 .all-empty{
   height:100vh;
