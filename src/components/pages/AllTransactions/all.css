@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.all-container{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+        border: 2px sloid black;
+}
+.all-head{
+  height:13vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.piechart{
+  height:70vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  gap:30px;
+  align-items: center;
+}
+.piechart h2{
+  width:50%;
+  font-style: 25px;
+  font-weight: 500;
+}
+.cardlist{
+    height:66vh;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+      gap:20px;
+      display:flex;
+    align-items: center;
+    flex-direction: column; 
+    overflow-y: auto;
+}
+.all-empty{
+  height:100vh;
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:50px;
+}
+.all-empty h1{
+ font-size: 35px;
+}
+.all-empty button{
+  height: 55px;
+ width:30%;
+ background-color:  rgb(61, 129, 39) ;
+ font-size: 17px;
+ color:white;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+button:hover{
+  cursor: pointer;
+}
