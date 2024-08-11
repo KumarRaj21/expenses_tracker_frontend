@@ -33,7 +33,7 @@ const Personal = (props) => {
                 </div>
             </div>
         </>) : <div className='all-empty'>
-        <h1>Do Not Have any Transactions, Add your Transactions </h1>
+        <h1>Do Not Have any Personal Transactions, Add your Transactions </h1>
         <button onClick={() => {
         props.setbtnpopup(!props.btnpopup);
     }} style={{ cursor: 'pointer' }}>
