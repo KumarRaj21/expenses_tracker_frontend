@@ -18,12 +18,13 @@
 }
 
 .all-head {
-  height: 13vh;
+  height: 12vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  font-weight: 600;
 }
 
 .piechart {
@@ -99,11 +100,13 @@ button:hover {
   }
 
   .all-head {
-    font-size: 28px;
+    margin-top: 13vh;
+    height: 11vh;
+    font-size: 25px;
   }
 
   .piechart {
-    height: 60vh;
+    height: 57vh;
     gap: 35px;
   }
 
@@ -144,7 +147,9 @@ button:hover {
   }
 
   .all-head {
-    font-size: 26px;
+    margin-top: 11vh;
+    height:10vh;
+    font-size: 23px;
   }
 
   .piechart {
@@ -190,7 +195,9 @@ button:hover {
   }
 
   .all-head {
-    font-size: 25px;
+    margin-top: 2vh;
+    height:9vh;
+    font-size: 15px;
   }
 
   .piechart {

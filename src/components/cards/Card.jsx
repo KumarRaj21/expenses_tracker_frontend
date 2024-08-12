@@ -11,28 +11,28 @@ const Cards = (props) => {
   const formattedDate = formatDate(props.item.date);
   return (
     <div className='card'>
-        <div className='card-head'>
-          <p className='card-head-1'>Date: {formattedDate}</p>
-          <div className='card-head-2'>
+      <div className='card-head'>
+        <p className='card-head-1'>Date: {formattedDate}</p>
+        <div className='card-head-2'>
           <FaRegEdit
-                        onClick={() => {
-                            props.setopenEdit(true)
-                            props.update(props.item._id)
-                        }}
-                        style={{ height: '30px', width: '30px', cursor: 'pointer' }}
-                    />
-                    <MdDeleteForever
-                        onClick={() => { props.del(props.id) }}
-                        style={{ height: '30px', width: '30px', cursor: 'pointer' }}
-                    />
-          </div>
+            onClick={() => {
+              props.setopenEdit(true)
+              props.update(props.item._id)
+            }}
+            style={{ height: '30px', width: '30px', cursor: 'pointer' }}
+          />
+          <MdDeleteForever
+            onClick={() => { props.del(props.id) }}
+            style={{ height: '30px', width: '30px', cursor: 'pointer' }}
+          />
         </div>
-        <div className='card-body'>
-          <p className='card-category'>paid / recieved category of : {props.item.category}</p>
-          <p className={props.item.type === "expense" ? "red" : "green"}>
-                 ₹ {props.item.amount} 
-          </p>
-        </div>
+      </div>
+      <div className='card-body'>
+        <p className='card-category'>paid / recieved category of : {props.item.category}</p>
+        <p className={props.item.type === "expense" ? "red" : "green"}>
+          ₹ {props.item.amount}
+        </p>
+      </div>
     </div>
   )
 }
