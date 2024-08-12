@@ -114,7 +114,7 @@ const [Inputs, setInputs] = useState({
                     </select>  
                     </div>
                     
-                    <button type='submit' className='button-submit'>Add Transaction</button>
+                    <button type='submit' className='button-submit'>+ Add Transaction</button>
                 </form>
             </div>
         </div>
