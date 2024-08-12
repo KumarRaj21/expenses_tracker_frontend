@@ -19,7 +19,10 @@ const Menu = (props) => {
             <NavLink to={'/category-groceries'}  onClick={()=> props.setOpenMenu(!props.OpenMenu)}>Groceries</NavLink>
           </div>
           <div className='menu-buttons'>
-            <button className='menu-add'>
+            <button className='menu-add' onClick={()=>{
+              props.setbtnpopup(!props.btnpopup)
+              props.setOpenMenu(!props.OpenMenu)
+            }}>
                 + Add Transaction
             </button>
             <button 

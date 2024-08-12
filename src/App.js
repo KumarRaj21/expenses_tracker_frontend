@@ -61,8 +61,8 @@ function App() {
   const del = async (cardid) => {
     await axios.delete(`https://expenses-tracker-backend-8wfn.onrender.com/api/k2/delete-transaction/${cardid}`, { data: { id: userId } }).then(() => {
       toast.success("Task Deleted");
-      window.location.reload()
       TransactionsFun();
+      setTransactionArray(prev => prev.filter(item => item._id !== cardid));
     })
   }
 
@@ -151,7 +151,7 @@ function App() {
           <Update openEdit={openEdit} setopenEdit={setopenEdit} TransactionArray={TransactionArray} setTransactionArray={setTransactionArray}
             setuserId={setuserId} userId={userId} update={update} updatedArray={updatedArray} setupdatedArray={setupdatedArray} TransactionsFun={TransactionsFun} />
 
-          <Menu setOpenMenu={setOpenMenu} OpenMenu={OpenMenu} setuser={setuser} setuserId={setuserId} navigate={navigate} />
+          <Menu setOpenMenu={setOpenMenu} OpenMenu={OpenMenu} setuser={setuser} setbtnpopup={setbtnpopup} btnpopup={btnpopup} setuserId={setuserId} navigate={navigate} />
         </div>) : <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login setuserId={setuserId} setuser={setuser}
