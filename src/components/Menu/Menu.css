@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.menu-container{
+.menu-container {
     display: none;
 }
 
@@ -58,7 +58,7 @@
     flex-direction: column;
 }
 
-.menu-add{
+.menu-add {
     height: 37%;
     width: 80%;
     background-color: rgb(61, 129, 39);
@@ -84,9 +84,10 @@
 
     html,
     body {
-      width: 100%;
-      overflow-x: hidden;
+        width: 100%;
+        overflow-x: hidden;
     }
+
     .menu-container {
         position: fixed;
         height: 100vh;

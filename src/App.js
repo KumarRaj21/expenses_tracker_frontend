@@ -24,7 +24,6 @@ function App() {
   const [openEdit, setopenEdit] = useState(false);
   const [updatedArray, setupdatedArray] = useState(null);
   const [OpenMenu, setOpenMenu] = useState(false);
-
   useEffect(() => {
     if (userId) {
       console.log('User ID:', userId);
@@ -144,7 +143,6 @@ function App() {
                 TransactionArray={TransactionArray} setTransactionArray={setTransactionArray} update={update} openEdit={openEdit}
                 setopenEdit={setopenEdit} setupdatedArray={setupdatedArray} updatedArray={updatedArray}
               />} />
-
             </Routes>
           </div>
           <Form setbtnpopup={setbtnpopup} btnpopup={btnpopup} userId={userId} TransactionsFun={TransactionsFun} />
