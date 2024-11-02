@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -15,6 +15,7 @@ import Bills from './components/pages/Bills/Bills';
 import Groceries from './components/pages/Groceries/Groceries';
 import { RiMenu5Fill } from "react-icons/ri";
 import Menu from './components/Menu/Menu';
+import Navbar from './components/navbar/Navbar';
 function App() {
   const [userId, setuserId] = useState(localStorage.getItem("userId") || null)
   const [user, setuser] = useState(!!userId);
@@ -75,39 +76,7 @@ function App() {
     <>
       {
         user ? (<div className='app-container'>
-          <div className='app-header'>
-            <h1>Expensify</h1>
-            <div className='app-header-buttons'>
-              <NavLink to={'/'}>
-                Home
-              </NavLink>
-              <NavLink to={'/category-personal'}>
-                Personal
-              </NavLink>
-              <NavLink to={'/category-bills'}>
-                Bills
-              </NavLink>
-              <NavLink to={'/category-groceries'}>
-                Groceries
-              </NavLink>
-              <button onClick={() => {
-                setbtnpopup(!btnpopup)
-              }}
-                style={{ width: "30%" }}>
-                + Add Transaction
-              </button>
-              <button
-                style={{ backgroundColor: "rgb(211, 80, 32)" }}
-                onClick={() => {
-                  toast.success("Logout successfully");
-                  setuser(false);
-                  setuserId(null);
-                  localStorage.removeItem("userId");
-                  navigate("/")
-                }}>Logout</button>
-            </div>
-
-          </div>
+          <Navbar navigate={navigate} setTransactionArray={setTransactionArray} setbtnpopup={setbtnpopup} btnpopup={btnpopup} setuser={setuser} setuserId={setuserId} />
           <div className='menu'>
             <div className='menu-head'>
               Expensify

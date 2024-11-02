@@ -20,20 +20,50 @@ const Login = (props) => {
       toast.error("Email or Password cannot be empty");
       return;
     }
-    await axios.post("https://expenses-tracker-backend-8wfn.onrender.com/api/k1/login", Inputs).then((res) => {
-      if (res.data.others._id) {
-        const id = res.data.others._id;
-        const username = res.data.others.username;
-        props.setuserId(id)
-        props.setuser(true)
+    
+    try {
+      const res = await axios.post("https://expenses-tracker-backend-8wfn.onrender.com/api/k1/login", Inputs);
+      if (res.data && res.data.others && res.data.others._id) {
+        const { _id: id, username } = res.data.others;
+        props.setuserId(id);
+        props.setuser(true);
         localStorage.setItem("userId", id);
         localStorage.setItem("username", username);
         props.setUsername(username);
-        toast.success("Login Successfully")
-        navigate("/all-transactions")
+        toast.success("Login Successfully");
+        navigate("/all-transactions");
+      } else if (res.data && res.data.message) {
+        // Handle cases where there's a message from the backend (e.g., invalid credentials)
+        toast.error(res.data.message);
+      } else {
+        toast.error("Something went wrong, please try again.");
       }
-    })
-  }
+    } catch (error) {
+      console.error("Error during login:", error);
+      toast.error("An error occurred. Please try again.");
+    }
+  };
+  
+  // const Submit = async (e) => {
+  //   e.preventDefault();
+  //   if (!Inputs.email || !Inputs.password) {
+  //     toast.error("Email or Password cannot be empty");
+  //     return;
+  //   }
+  //   await axios.post("https://expenses-tracker-backend-8wfn.onrender.com/api/k1/login", Inputs).then((res) => {
+  //     if (res.data.others._id) {
+  //       const id = res.data.others._id;
+  //       const username = res.data.others.username;
+  //       props.setuserId(id)
+  //       props.setuser(true)
+  //       localStorage.setItem("userId", id);
+  //       localStorage.setItem("username", username);
+  //       props.setUsername(username);
+  //       toast.success("Login Successfully")
+  //       navigate("/all-transactions")
+  //     }
+  //   })
+  // }
   return (
     <div className='login-container'>
       <div className='login-in'>
